@@ -1,0 +1,9 @@
+<div class="form-group">
+    <label class="col-sm-{{::labelSize}} control-label">{{::property | capitalize}}:</label>
+    <div class="col-sm-{{::inputSize}}">
+        <span ng-if="!readonly">
+            <input type="text" class="form-control" placeholder="Enter {{::property | capitalize}}" ng-model="ngModel[property]" />
+        </span>
+        <p ng-if="readonly" class="form-control-static">{{ngModel[property]}}</p>
+    </div>
+</div>

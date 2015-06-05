@@ -1,0 +1,7 @@
+<th class="header" ng-class="{'bg-blue-lt50' : (api.sortProperty === property)}">
+    <ng-transclude></ng-transclude>
+    <button class="btn btn-link p-0 pull-right" ng-click="updateSort()">
+        <span class="glyphicon"
+              ng-class="{'glyphicon-triangle-bottom' : (sortOrder === '' || sortOrder === 'desc'), 'glyphicon-triangle-top' : (sortOrder === 'asc')}"></span>
+    </button>
+</th>

@@ -1,0 +1,15 @@
+<nav>
+    <ul class="pagination" ng-if="(api.pageTotal > 1)">
+        <li ng-class="{disabled : api.page <= 0}">
+            <a ng-click="gotoPage(api.page-1)"><span>&laquo;</span></a>
+        </li>
+
+        <li ng-repeat="i in pages" ng-class="{active : (api.page === i)}">
+            <a ng-click="gotoPage(i)">{{i+1}}</a>
+        </li>
+
+        <li ng-class="{disabled : api.page >= pages.length-1}">
+            <a ng-click="gotoPage(api.page+1)"><span>&raquo;</span></a>
+        </li>
+    </ul>
+</nav>
