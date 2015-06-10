@@ -36,7 +36,7 @@ angular.module("composer.common")
 
             function update() {
                 //get total pages
-                api.pageTotal = (api.pageSize < 1) ? 1 : Math.ceil(api.totalRows/api.pageSize);
+                api.pageTotal = (api.totalRows < api.pageSize) ? 1 : Math.ceil(api.totalRows/api.pageSize);
 
                 //check if current page is valid
                 var page = utilityService.clamp(api.page, 0, api.pageTotal-1);
