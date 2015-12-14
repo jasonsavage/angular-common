@@ -26,12 +26,6 @@ angular.module("composer.common")
         harmonyViewerModal : harmonyViewerModal
     };
 
-    function reLoginModal(){
-        return getModal({
-            templateUrl : "composer/common/views/modalRelogin.tpl.html",
-            controller : "ModalReloginCtrl"
-        });
-    }
 
     function getModal(config) {
         //wrap the modal instance object so we can use it with promises
@@ -136,49 +130,8 @@ angular.module("composer.common")
         });
     }
 
-    function confirmDeleteModal(title, message) {
-        return getModal({
-            templateUrl : "composer/common/views/modalConfirmDelete.tpl.html",
-            controller : function ($scope) {
-                $scope.title = title;
-                $scope.message = message;
-            }
-        });
-    }
 
-    function unsavedChangesModal(saveChangesHander) {
-        return getModal({
-            templateUrl : "composer/common/views/modalUnsavedChanges.tpl.html",
-            controller : function ($scope) {
-                $scope.saveChanges = saveChangesHander;
-            }
-        });
-    }
 
-    function loadWebServiceModal() {
-        return getModal({
-            templateUrl : "composer/common/views/modalLoadWebService.tpl.html",
-            controller : "ModalLoadWebServiceCtrl"
-        });
-    }
 
-    function harmonyViewerModal(formData){
-        return getModal({
-            templateUrl : "composer/common/views/modalHarmonyViewer.tpl.html",
-            controller : "ModalHarmonyViewerCtrl",
-            resolve : {
-                formData : function () {
-                    return formData;
-                }
-            }
-        });
-    }
-
-    function editRuleActionModal() {
-        return getModal({
-            templateUrl : "composer/common/views/modalEditRuleAction/modal.tpl.html",
-            controller : "ModalEditRuleActionCtrl"
-        });
-    }
 
 });
