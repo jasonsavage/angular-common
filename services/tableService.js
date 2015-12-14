@@ -166,7 +166,6 @@ angular.module("composer.common")
             function getPaginationStatus() {
                 var start = api.page * api.pageSize,
                     end = start + Math.min(api.tableRows.length, api.pageSize);
-
                 //if there are no records
                 start = (end === 0) ? -1 : start;
                 return "Displaying " + (start+1) + " - " + end + " of " + api.totalRows;
